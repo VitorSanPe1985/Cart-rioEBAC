@@ -122,14 +122,14 @@ int main ()
 {
 	int opcao=0;//tem que deixar sempre em zero//
 	int x=1;
-	char senha[10]="a";
+	char senhadigitada[10]="a";
 	int comparacao;
 	
 	printf("### Cartório do EBACKOVSKI\n\n");
 	printf("Favor digitar sua senha de camarada admnistrador, ou morra na GULAG: \n");
-	scanf ("%s", senha);
+	scanf ("%s", senhadigitada);
 	
-	comparacao=strcmp(senha, "gulag");
+	comparacao=strcmp(senhadigitada, "admin");
 	if(comparacao==0)
 	{
 	
