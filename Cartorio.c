@@ -117,50 +117,67 @@ int deletar ()
 	
 
 }
+
 int main ()
 {
 	int opcao=0;//tem que deixar sempre em zero//
 	int x=1;
-	for(x=1;x=1;) //laço de repetição - nesse caso é um macete pra repetir pra sempre//
+	char senha[10]="a";
+	int comparacao;
+	
+	printf("### Cartório do EBACKOVSKI\n\n");
+	printf("Favor digitar sua senha de camarada admnistrador, ou morra na GULAG: \n");
+	scanf ("%s", senha);
+	
+	comparacao=strcmp(senha, "gulag");
+	if(comparacao==0)
 	{
 	
-		setlocale(LC_ALL, "Portuguese");// Deginindo a linguagem//
-		
-		printf ("####Cartório da bagunça infinita####\n");
-		printf ("Escolhe o que você quer aí, parsonauta: \n");
-		printf ("\t1- Registrar nominho\n");
-		printf ("\t2- Consultar nominho\n");
-		printf ("\t3- Matar o filadaputa\n");
-		printf ("\t4- Sair dessa bodega\n\n\n");
-		printf ("Digite a opção selecionada: ");
-		scanf ("%d", &opcao);
-		
-		system ("cls"); //limpar console//
-		
-		switch(opcao)
+	
+		for(x=1;x=1;) //laço de repetição - nesse caso é um macete pra repetir pra sempre//
 		{
-		case 1:
-		registro ();
-		break;
 		
-		case 2:
-		consulta ();
-		break;
-		
-		case 3:
-		deletar ();
-		break;
-		
-		case 4:
-		printf ("Obrigado por testar meu programa! Agora vai tomar um café e pensar na vida");
-		return 0;
-		break;
-		
-		default:
-		printf ("Escolha uma opção válida\n");
-		system ("pause");//Pra que a tela volte bonitinha//
-		system ("cls");
-		break;
+			setlocale(LC_ALL, "Portuguese");// Deginindo a linguagem//
+			
+			printf ("####Cartório da bagunça infinita####\n");
+			printf ("Escolhe o que você quer aí, parsonauta: \n");
+			printf ("\t1- Registrar nominho\n");
+			printf ("\t2- Consultar nominho\n");
+			printf ("\t3- Matar o filadaputa\n");
+			printf ("\t4- Sair dessa bodega\n\n\n");
+			printf ("Digite a opção selecionada: ");
+			scanf ("%d", &opcao);
+			
+			system ("cls"); //limpar console//
+			
+			switch(opcao)
+			{
+			case 1:
+			registro ();
+			break;
+			
+			case 2:
+			consulta ();
+			break;
+			
+			case 3:
+			deletar ();
+			break;
+			
+			case 4:
+			printf ("Obrigado por testar meu programa! Agora vai tomar um café e pensar na vida");
+			return 0;
+			break;
+			
+			default:
+			printf ("Escolha uma opção válida\n");
+			system ("pause");//Pra que a tela volte bonitinha//
+			system ("cls");
+			break;
+			}
 		}
 	}
+	else
+		printf("Senha incorreta, vai pra GULAG");
+
 }
