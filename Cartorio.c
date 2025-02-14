@@ -1,11 +1,11 @@
-#include <stdio.h>//Sempre que quiser incluir comunicação com o usuario//
-#include <stdlib.h>//biblioteca de alocação do espaço de memória//
-#include <locale.h>//biblioteca de alocação de texto por região//
+#include <stdio.h>//Sempre que quiser incluir comunicação com o usuario
+#include <stdlib.h>//biblioteca de alocação do espaço de memória
+#include <locale.h>//biblioteca de alocação de texto por região
 #include <string.h>//Responsável por cuidar das strings
 
-int registro ()//função resp por cadastrar//
+int registro ()//função resp por cadastrar
 {
-	setlocale(LC_ALL, "Portuguese");//deixa em português//
+	setlocale(LC_ALL, "Portuguese");//deixa em português
 	
 	char arquivo[40];
 	char cpf[40];
@@ -14,11 +14,11 @@ int registro ()//função resp por cadastrar//
 	char cargo[40];
 	
 	printf ("Digite o CPF a ser cadastrado: \n");
-	scanf ("%s", cpf); //nota que o %s é pra salvar algo em uma string, que vem na sequencia//
-	strcpy(arquivo, cpf);//copia o valor de um string em outro do cpf pro arquivo//
-	FILE *file;//diz ao sistema para procurar file//
-	file = fopen(arquivo,"w"); //deu a ordem: cria um arquivo e o escreva w é write//
-	fprintf(file,cpf);//salva o valor da variável//
+	scanf ("%s", cpf); //nota que o %s é pra salvar algo em uma string, que vem na sequencia
+	strcpy(arquivo, cpf);//copia o valor de um string em outro do cpf pro arquivo
+	FILE *file;//diz ao sistema para procurar file
+	file = fopen(arquivo,"w"); //deu a ordem: cria um arquivo e o escreva w é write
+	fprintf(file,cpf);//salva o valor da variável
 	fclose(file);//fecha o file//
 	
 	file=fopen(arquivo, "a");
@@ -107,8 +107,8 @@ int deletar ()
 	}
 	else
 	{
-		fclose(file);//fecha o arquivo pq ele existe//
-		remove(cpf); //remove o que foi selecionado para tomar o delete//
+		fclose(file);//fecha o arquivo pq ele existe
+		remove(cpf); //remove o que foi selecionado para tomar o delete
 		printf("Usuário deletado com sucesso.\n");
 		system ("pause");
 		system ("cls"); 
@@ -120,13 +120,13 @@ int deletar ()
 
 int main ()
 {
-	int opcao=0;//tem que deixar sempre em zero//
+	int opcao=0;//tem que deixar sempre em zero
 	int x=1;
 	char senhadigitada[10]="a";
 	int comparacao;
 	
-	printf("### Cartório do EBACKOVSKI\n\n");
-	printf("Favor digitar sua senha de camarada admnistrador, ou morra na GULAG: \n");
+	printf("### Cartório do EBAC\n\n");
+	printf("Favor digitar sua senha: \n");
 	scanf ("%s", senhadigitada);
 	
 	comparacao=strcmp(senhadigitada, "admin");
@@ -134,21 +134,21 @@ int main ()
 	{
 	
 	
-		for(x=1;x=1;) //laço de repetição - nesse caso é um macete pra repetir pra sempre//
+		for(x=1;x=1;) //laço de repetição - nesse caso é um macete pra repetir pra sempre
 		{
 		
-			setlocale(LC_ALL, "Portuguese");// Deginindo a linguagem//
+			setlocale(LC_ALL, "Portuguese");// Deginindo a linguagem
 			
-			printf ("####Cartório da bagunça infinita####\n");
-			printf ("Escolhe o que você quer aí, parsonauta: \n");
-			printf ("\t1- Registrar nominho\n");
-			printf ("\t2- Consultar nominho\n");
-			printf ("\t3- Matar o filadaputa\n");
-			printf ("\t4- Sair dessa bodega\n\n\n");
+			printf ("####Cartório EBAC####\n");
+			printf ("Escolha dentre as opções listadas: \n");
+			printf ("\t1- Registrar usuário\n");
+			printf ("\t2- Consultar usuário\n");
+			printf ("\t3- Excluir usuário\n");
+			printf ("\t4- Sair do programa\n\n\n");
 			printf ("Digite a opção selecionada: ");
 			scanf ("%d", &opcao);
 			
-			system ("cls"); //limpar console//
+			system ("cls"); //limpar console
 			
 			switch(opcao)
 			{
@@ -171,7 +171,7 @@ int main ()
 			
 			default:
 			printf ("Escolha uma opção válida\n");
-			system ("pause");//Pra que a tela volte bonitinha//
+			system ("pause");//Pra que a tela volte bonitinha
 			system ("cls");
 			break;
 			}
